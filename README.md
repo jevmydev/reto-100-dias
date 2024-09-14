@@ -1,4 +1,4 @@
-# Bienvenido, al reto de 100 días 🎯
+# Bienvenido al reto de 100 días 🎯
 
 Este tratará de realizar **10 proyectos** hasta el final del año 2024 (100 días aprox). Se usará principalmente HTML, CSS y JavaScript, aunque no cabe duda que habrán muchos lenguajes y tecnologías.
 

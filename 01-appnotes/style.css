@@ -3,12 +3,12 @@
 
     --font-size-s: 0.8rem;
     --font-size-m: 1rem;
-    --font-size-l: 1.8rem;
+    --font-size-l: 1.6rem;
 
     --color-principal: #020202;
     --color-secondary: #ffee00;
     --bg-principal: #fafafa;
-    --bg-secondary: #fcf9f9;
+    --bg-secondary: #f9f9f9;
     --bg-secondary-hover: #f5f5f5;
 
     --max-width-center: 800px;
@@ -82,6 +82,10 @@ body {
     letter-spacing: -1px;
 }
 
+.list {
+    list-style: none;
+}
+
 .nav {
     display: flex;
 }
@@ -106,6 +110,43 @@ body {
     transform: scale(1.01);
 }
 
-.hero__intro__title {
+.notes__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.note {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.note__action {
+    background-color: var(--bg-secondary);
+    border: 1px solid #0001;
+    padding: 1rem;
+}
+
+.note__article {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.note__title {
     font-size: var(--font-size-l);
+}
+
+.note__description {
+    font-size: var(--font-size-m);
+    display: -webkit-box;
+    line-clamp: 10;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }

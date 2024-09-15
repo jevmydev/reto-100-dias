@@ -1,0 +1,30 @@
+{
+    "name": "reto100dias",
+    "version": "1.0.0",
+    "description": "En este reto se realizarán 10 proyectos hasta el final del año 2024.",
+    "main": "",
+    "scripts": {
+        "lint": "eslint . --fix",
+        "format": "prettier . --write"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jevmydev/reto-100-dias.git"
+    },
+    "keywords": [
+        "reto",
+        "100dias",
+        "html-css-javascript"
+    ],
+    "author": "Jeremy Díaz",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jevmydev/reto-100-dias/issues"
+    },
+    "homepage": "https://github.com/jevmydev/reto-100-dias#readme",
+    "devDependencies": {
+        "eslint": "9.10.0",
+        "eslint-config-prettier": "9.1.0",
+        "prettier": "3.3.3"
+    }
+}

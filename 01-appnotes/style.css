@@ -1,7 +1,7 @@
 :root {
-    --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
-    --font-size-s: .8rem;
+    --font-size-s: 0.8rem;
     --font-size-m: 1rem;
     --font-size-l: 1.8rem;
 
@@ -37,25 +37,25 @@ body {
 .link {
     color: var(--color-principal);
     text-decoration: none;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
 
     /* Animation */
     position: relative;
 
     &::before {
-        content: '';
-        border-radius: .5rem;
+        content: "";
+        border-radius: 0.5rem;
         background-color: var(--color-secondary);
         position: absolute;
-        left: .5rem;
+        left: 0.5rem;
         bottom: 5px;
         width: 100%;
-        height: .3rem;
+        height: 0.3rem;
         z-index: -1;
-        transition: .3s ease-in-out;
+        transition: 0.3s ease-in-out;
     }
 
     &:hover::before {
@@ -70,18 +70,17 @@ body {
     background-color: transparent;
     border: 0;
     cursor: pointer;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     color: var(--color-principal);
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
 }
 
 .title {
     font-weight: bold;
     letter-spacing: -1px;
 }
-
 
 .nav {
     display: flex;
@@ -98,8 +97,8 @@ body {
     background-color: var(--bg-secondary);
     border: 1px solid #0001;
     width: 100%;
-    padding: 10rem .5rem;
-    transition: .3s ease;
+    padding: 10rem 0.5rem;
+    transition: 0.3s ease;
 }
 
 .hero__intro__button:hover {

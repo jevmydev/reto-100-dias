@@ -30,8 +30,6 @@ module.exports = {
         indent: [RULES.WARN, 4],
         quotes: [RULES.WARN, "double"],
         semi: [RULES.WARN, "always"],
-        "linebreak-style": RULES.OFF,
-        "react/react-in-jsx-scope": RULES.OFF,
-        "react/prop-types": RULES.OFF
+        "linebreak-style": RULES.OFF
     }
 };

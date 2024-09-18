@@ -21,12 +21,12 @@
             </div>
         </header>
         <main class="main">
-            <section class="main__hero hero" style="display: none">
+            <section class="main__hero hero">
                 <div class="hero__box box">
                     <div class="hero__intro">
                         <button class="hero__intro__button button">
                             <svg width="50" height="50" viewBox="0 0 16 16" fill="currentColor" x="190" y="190" role="img" xmlns="http://www.w3.org/2000/svg">
-                                <g fill="currentColor">
+                                <g fill="#fff">
                                     <path
                                         fill="currentColor"
                                         d="M2 8a6 6 0 1 1 12 0A6 6 0 0 1 2 8Zm6-3a.5.5 0 0 0-.5.5v2h-2a.5.5 0 0 0 0 1h2v2a.5.5 0 0 0 1 0v-2h2a.5.5 0 0 0 0-1h-2v-2A.5.5 0 0 0 8 5Z"
@@ -38,44 +38,107 @@
                     </div>
                 </div>
             </section>
-            <section class="main__notes notes">
+            <section class="main__notes notes disabled">
                 <div class="notes__box box">
                     <ul class="notes__list list">
                         <li class="list__note note">
+                            <div class="note__options optiones">
+                                <button class="options__addfavorite note__button button" title="Agregar a favoritos">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 28 28" fill="none">
+                                        <path
+                                            clip-rule="evenodd"
+                                            d="M5 2.92445C5 1.8616 5.8616 1 6.92444 1H20.3956C21.4584 1 22.32 1.8616 22.32 2.92444V25.0556C22.32 26.6414 20.5096 27.5466 19.2409 26.5951L13.66 22.4094L8.07911 26.5951C6.81045 27.5466 5 26.6414 5 25.0556V2.92445ZM20.3956 3.50178C20.3956 3.18293 20.1371 2.92444 19.8182 2.92444L7.50178 2.92445C7.18293 2.92445 6.92444 3.18293 6.92444 3.50178V24.4782C6.92444 24.7161 7.19601 24.8519 7.38631 24.7092L12.5053 20.8699C13.1896 20.3567 14.1304 20.3567 14.8147 20.8699L19.9337 24.7092C20.124 24.8519 20.3956 24.7161 20.3956 24.4782V3.50178Z"
+                                            fill="#000000"
+                                            fill-rule="evenodd"
+                                        />
+                                        <path d="M10 11C10 10.4477 10.4477 10 11 10H17C17.5523 10 18 10.4477 18 11C18 11.5523 17.5523 12 17 12H11C10.4477 12 10 11.5523 10 11Z" fill="#000000" />
+                                        <path d="M14 15C13.4477 15 13 14.5523 13 14V8C13 7.44772 13.4477 7 14 7C14.5523 7 15 7.44772 15 8V14C15 14.5523 14.5523 15 14 15Z" fill="#000000" />
+                                    </svg>
+                                </button>
+                                <button class="options__delete note__button button" title="Eliminar nota">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M18 6L17.1991 18.0129C17.129 19.065 17.0939 19.5911 16.8667 19.99C16.6666 20.3412 16.3648 20.6235 16.0011 20.7998C15.588 21 15.0607 21 14.0062 21H9.99377C8.93927 21 8.41202 21 7.99889 20.7998C7.63517 20.6235 7.33339 20.3412 7.13332 19.99C6.90607 19.5911 6.871 19.065 6.80086 18.0129L6 6M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6M14 10V17M10 10V17"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
                             <button class="note__action note__button button">
                                 <article class="note__article">
                                     <header class="note__header">
-                                        <h3 class="note__title title">El día de hoy...</h3>
+                                        <h3 class="note__title title">Parque</h3>
+                                        <p class="note__date">17-09-2024</p>
                                     </header>
                                     <section class="note__section">
                                         <p class="note__description">
-                                            Desperté muy bien en la mañana, dormi de forma increíble y luego me fui a pasear con mi perro llamado Oso. La verdad es que está siendo un día increíble y
-                                            muy bonito.Desperté muy bien en la mañana, dormi de forma increíble y luego me fui a pasear con mi perro llamado Oso. La verdad es que está siendo un día
-                                            increíble y muy bonito.Desperté muy bien en la mañana, dormi de forma increíble y luego me fui a pasear con mi perro llamado Oso. La verdad es que está
-                                            siendo un día increíble y muy bonito.Desperté muy bien en la mañana, dormi de forma increíble y luego me fui a pasear con mi perro llamado Oso. La verdad es
-                                            que está siendo un día increíble y muy bonito.Desperté muy bien en la mañana, dormi de forma increíble y luego me fui a pasear con mi perro llamado Oso. La
-                                            verdad es que está siendo un día increíble y muy bonito.Desperté muy bien en la mañana, dormi de forma increíble y luego me fui a pasear con mi perro
-                                            llamado Oso. La verdad es que está siendo un día increíble y muy bonito.Desperté muy bien en la mañana, dormi de forma increíble y luego me fui a pasear con
-                                            mi perro llamado Oso. La verdad es que está siendo un día increíble y muy bonito.Desperté muy bien en la mañana, dormi de forma increíble y luego me fui a
-                                            pasear con mi perro llamado Oso. La verdad es que está siendo un día increíble y muy bonito.Desperté muy bien en la mañana, dormi de forma increíble y luego
-                                            me fui a pasear con mi perro llamado Oso. La verdad es que está siendo un día increíble y muy bonito.Desperté muy bien en la mañana, dormi de forma
-                                            increíble y luego me fui a pasear con mi perro llamado Oso. La verdad es que está siendo un día increíble y muy bonito.Desperté muy bien en la mañana, dormi
-                                            de forma increíble y luego me fui a pasear con mi perro llamado Oso. La verdad es que está siendo un día increíble y muy bonito.Desperté muy bien en la
-                                            mañana, dormi de forma increíble y luego me fui a pasear con mi perro llamado Oso. La verdad es que está siendo un día increíble y muy bonito.Desperté muy
-                                            bien en la mañana, dormi de forma increíble y luego me fui a pasear con mi perro llamado Oso. La verdad es que está siendo un día increíble y muy
-                                            bonito.Desperté muy bien en la mañana, dormi de forma increíble y luego me fui a pasear con mi perro llamado Oso. La verdad es que está siendo un día
-                                            increíble y muy bonito.Desperté muy bien en la mañana, dormi de forma increíble y luego me fui a pasear con mi perro llamado Oso. La verdad es que está
-                                            siendo un día increíble y muy bonito.Desperté muy bien en la mañana, dormi de forma increíble y luego me fui a pasear con mi perro llamado Oso. La verdad es
-                                            que está siendo un día increíble y muy bonito.Desperté muy bien en la mañana, dormi de forma increíble y luego me fui a pasear con mi perro llamado Oso. La
-                                            verdad es que está siendo un día increíble y muy bonito.Desperté muy bien en la mañana, dormi de forma increíble y luego me fui a pasear con mi perro
-                                            llamado Oso. La verdad es que está siendo un día increíble y muy bonito.Desperté muy bien en la mañana, dormi de forma increíble y luego me fui a pasear con
-                                            mi perro llamado Oso. La verdad es que está siendo un día increíble y muy bonito.
+                                            Hoy fui al parque e hizo un día increíble y muy bonito.Hoy fui al parque e hizo un día increíble y muy bonito.Hoy fui al parque e hizo un día increíble y
+                                            muy bonito. Hoy fui al parque e hizo un día increíble y muy bonito.Hoy fui al parque e hizo un día increíble y muy bonito.Hoy fui al parque e hizo un día
+                                            increíble y muy bonito. Hoy fui al parque e hizo un día increíble y muy bonito.Hoy fui al parque e hizo un día increíble y muy bonito.Hoy fui al parque e
+                                            hizo un día increíble y muy bonito. Hoy fui al parque e hizo un día increíble y muy bonito.Hoy fui al parque e hizo un día increíble y muy bonito.Hoy fui al
+                                            parque e hizo un día increíble y muy bonito. Hoy fui al parque e hizo un día increíble y muy bonito.Hoy fui al parque e hizo un día increíble y muy
+                                            bonito.Hoy fui al parque e hizo un día increíble y muy bonito. Hoy fui al parque e hizo un día increíble y muy bonito.Hoy fui al parque e hizo un día
+                                            increíble y muy bonito.Hoy fui al parque e hizo un día increíble y muy bonito. Hoy fui al parque e hizo un día increíble y muy bonito.Hoy fui al parque e
+                                            hizo un día increíble y muy bonito.Hoy fui al parque e hizo un día increíble y muy bonito. Hoy fui al parque e hizo un día increíble y muy bonito.Hoy fui al
+                                            parque e hizo un día increíble y muy bonito.Hoy fui al parque e hizo un día increíble y muy bonito. Hoy fui al parque e hizo un día increíble y muy
+                                            bonito.Hoy fui al parque e hizo un día increíble y muy bonito.Hoy fui al parque e hizo un día increíble y muy bonito. Hoy fui al parque e hizo un día
+                                            increíble y muy bonito.Hoy fui al parque e hizo un día increíble y muy bonito.Hoy fui al parque e hizo un día increíble y muy bonito. Hoy fui al parque e
+                                            hizo un día increíble y muy bonito.Hoy fui al parque e hizo un día increíble y muy bonito.Hoy fui al parque e hizo un día increíble y muy bonito. Hoy fui al
+                                            parque e hizo un día increíble y muy bonito.Hoy fui al parque e hizo un día increíble y muy bonito.Hoy fui al parque e hizo un día increíble y muy bonito.
+                                            Hoy fui al parque e hizo un día increíble y muy bonito.Hoy fui al parque e hizo un día increíble y muy bonito.Hoy fui al parque e hizo un día increíble y
+                                            muy bonito.
                                         </p>
                                     </section>
                                 </article>
                             </button>
                         </li>
+                        <li class="list__addnote addnote">
+                            <button class="list__addnote__button button">
+                                <svg width="50" height="50" viewBox="0 0 16 16" fill="currentColor" x="190" y="190" role="img" xmlns="http://www.w3.org/2000/svg">
+                                    <g fill="currentColor">
+                                        <path
+                                            fill="currentColor"
+                                            d="M2 8a6 6 0 1 1 12 0A6 6 0 0 1 2 8Zm6-3a.5.5 0 0 0-.5.5v2h-2a.5.5 0 0 0 0 1h2v2a.5.5 0 0 0 1 0v-2h2a.5.5 0 0 0 0-1h-2v-2A.5.5 0 0 0 8 5Z"
+                                        />
+                                    </g>
+                                </svg>
+                                <h2 class="addnote__title title">Crea otra nota</h2>
+                            </button>
+                        </li>
                     </ul>
+                </div>
+            </section>
+            <section class="main__createnote createnote disabled">
+                <div class="createnote__bg">
+                    <div class="createnote__box box">
+                        <div class="createnote__exit">
+                            <button class="createnote__exit__button button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z"
+                                        fill="currentColor"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="createnote__inner">
+                            <h2 class="createnote__title title">Crea una nota</h2>
+                            <form class="createnote__form">
+                                <label class="createnote__label">
+                                    Título
+                                    <input class="createnote__input" type="text" autocomplete="off" placeholder="Escribe aquí el título de tu nota" />
+                                </label>
+                                <label class="createnote__label">
+                                    Contenido
+                                    <textarea class="createnote__textarea" autocomplete="off" placeholder="Escribe aquí el contenido de tu nota"></textarea>
+                                </label>
+                                <button class="createnote__submit createnote__button button" type="submit">Guardar nota</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>

@@ -3,7 +3,7 @@
 
     --font-size-s: 0.8rem;
     --font-size-m: 1rem;
-    --font-size-l: 1.6rem;
+    --font-size-l: 1.8rem;
 
     --color-principal: #020202;
     --color-secondary: #ffee00;
@@ -34,6 +34,10 @@ body {
     margin: 0 auto;
 }
 
+.disabled {
+    display: none;
+}
+
 .link {
     color: var(--color-principal);
     text-decoration: none;
@@ -41,29 +45,32 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-
-    /* Animation */
+    transition: .3s ease-in-out;
     position: relative;
 
     &::before {
-        content: "";
-        border-radius: 0.5rem;
-        background-color: var(--color-secondary);
+        content: '';
         position: absolute;
-        left: 0.5rem;
-        bottom: 5px;
         width: 100%;
-        height: 0.3rem;
-        z-index: -1;
-        transition: 0.3s ease-in-out;
+        height: 4px;
+        background-color: var(--color-secondary);
+        bottom: -4px;
+        transform-origin: right;
+        transform: scaleX(1);
+        transition: transform .3s ease-in-out;
     }
 
-    &:hover::before {
-        left: -5px;
-        bottom: 0;
-        height: 100%;
-        width: calc(100% + 10px);
+    &&:hover::before {
+        transform-origin: left;
+        transform: scaleX(0);
     }
+}
+
+.link:hover,
+.options__addfavorite:hover,
+.options__delete:hover,
+.createnote__exit__button:hover {
+    transform: scale(1.05);
 }
 
 .button {
@@ -95,7 +102,9 @@ body {
     height: 1.25rem;
 }
 
-.hero__intro__button {
+.hero__intro__button,
+.list__addnote__button,
+.createnote__submit {
     justify-content: center;
     flex-direction: column;
     background-color: var(--bg-secondary);
@@ -105,14 +114,16 @@ body {
     transition: 0.3s ease;
 }
 
-.hero__intro__button:hover {
+.hero__intro__button:hover,
+.list__addnote__button:hover,
+.createnote__submit:hover {
     background-color: var(--bg-secondary-hover);
-    transform: scale(1.01);
+    transform: scale(1.05);
 }
 
 .notes__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
 
@@ -121,17 +132,42 @@ body {
     gap: .5rem;
     flex-wrap: wrap;
     align-items: center;
+    position: relative;
 }
 
 .note__action {
     background-color: var(--bg-secondary);
     border: 1px solid #0001;
-    padding: 1rem;
+    padding: 2rem;
+
+    /* Animation */
+    position: relative;
+    z-index: 2;
+
+    &::before {
+        content: "";
+        border-radius: 0.5rem;
+        background-color: var(--color-secondary);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0.3rem;
+        z-index: -1;
+        transition: 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+        left: -5px;
+        bottom: 0;
+        height: 100%;
+        width: calc(100% + 10px);
+    }
 }
 
 .note__article {
     display: flex;
-    gap: .5rem;
+    gap: 1rem;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
@@ -140,13 +176,114 @@ body {
 
 .note__title {
     font-size: var(--font-size-l);
+    display: -webkit-box;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .note__description {
     font-size: var(--font-size-m);
     display: -webkit-box;
-    line-clamp: 10;
-    -webkit-line-clamp: 10;
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+.note__options,
+.createnote__exit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    gap: .5rem;
+}
+
+.options__addfavorite,
+.options__delete,
+.createnote__exit__button {
+    transition: .3s ease-in-out;
+    padding: .5rem;
+    border: 1px solid #0001;
+    border-radius: 9999rem;
+}
+
+.options__delete,
+.createnote__exit__button {
+    background-color: #d11a2920;
+    color: #d11a2a;
+}
+
+.options__delete:hover,
+.createnote__exit__button:hover {
+    background-color: #f00;
+    color: var(--bg-secondary-hover);
+}
+
+.list__addnote__button {
+    padding: 2rem;
+    height: 100%;
+}
+
+.createnote__bg {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-principal);
+}
+
+.createnote__box {
+    position: relative;
+}
+
+.createnote__form,
+.createnote__label,
+.createnote__inner {
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+
+.createnote__label {
+    gap: 1rem;
+}
+
+.createnote__inner {
+    gap: 5rem;
+}
+
+.createnote__input,
+.createnote__textarea {
+    font-family: var(--font-family);
+    font-size: var(--font-size-m);
+    border-radius: .5rem;
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 3px;
+    border: 0;
+    background-color: var(--bg-secondary);
+    padding: .6rem 1rem;
+    transition: 0.12s ease-in-out;
+}
+
+.createnote__textarea {
+    min-height: 15rem;
+    resize: vertical;
+}
+
+.createnote__input:focus,
+.createnote__textarea:focus {
+    outline-offset: 5px;
+    background-color: var(--bg-principal);
+}
+
+.createnote__submit {
+    padding: 1rem;
+    font-size: var(--font-size-m);
 }

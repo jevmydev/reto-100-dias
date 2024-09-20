@@ -1,5 +1,5 @@
-import { toggleHero, toggleNotes, toggleCreateNote } from "./utils.js";
-import { $listNotes, $addNoteBtn, $createFirstNoteBtn, $formCreateNote, $closeCreateBtn } from "./constants.js";
+import { toggleHero, toggleNotes, toggleCreateNote, isExistNotes } from "./utils.js";
+import { $listNotes, $addNoteBtn, $createFirstNoteBtn, $formCreateNote, $inputTitle, $inputContent, $closeCreateBtn, $editSubmit, $createSubmit } from "./constants.js";
 import { setStorage, getStorage } from "./storage.js";
 
 function init() {
@@ -7,6 +7,8 @@ function init() {
 
     for (let key = 1; key <= lengthStorage; key++) {
         const note = getStorage({ key, isJSON: true });
+        if (note === null) continue;
+
         constructNote(note);
     }
 
@@ -14,32 +16,49 @@ function init() {
 }
 
 function refreshPrincipalPage() {
-    const listNotesChildrens = $listNotes.children;
-    const lengthListNotes = listNotesChildrens.length;
+    const isExistNote = isExistNotes();
 
-    if (lengthListNotes > 1) toggleNotes();
+    if (isExistNote) toggleNotes();
     else toggleHero();
 }
 
-function refreshNoteEventListeners(liNote) {
-    const { 0: $options, 1: $actionNote } = liNote.children;
+function refreshNoteEventListeners($liNote) {
+    const { 0: $options, 1: $actionNote } = $liNote.children;
     const { 0: $favoriteOption, 1: $deleteOption } = $options.children;
 
-    $actionNote.addEventListener("click", actionNote);
-    $favoriteOption.addEventListener("click", favoriteNote);
-    $deleteOption.addEventListener("click", deleteNote);
+    $actionNote.addEventListener("click", () => actionNote($liNote));
+    $favoriteOption.addEventListener("click", () => favoriteNote($favoriteOption, $liNote));
+    $deleteOption.addEventListener("click", () => deleteNote($liNote));
 }
 
-function actionNote() {
-    console.log("action");
+function actionNote($liNote) {
+    addNote();
+    $createSubmit.classList.add("createnote__submit--disabled");
+    $editSubmit.classList.remove("createnote__submit--disabled");
+
+    const key = $liNote.key;
+    const note = getStorage({ key, isJSON: true });
+
+    $inputTitle.value = note.title;
+    $inputContent.value = note.content;
 }
 
-function favoriteNote() {
-    console.log("favorite");
+function favoriteNote($favoriteOption, $liNote) {
+    $favoriteOption.classList.toggle("options__addfavorite--favorite");
+    $liNote.classList.toggle("note--favorite");
 }
 
-function deleteNote() {
-    console.log("delete");
+function deleteNote($liNote) {
+    const key = $liNote.key;
+
+    localStorage.removeItem(key);
+    $listNotes.removeChild($liNote);
+
+    const isExistNote = isExistNotes();
+    if (!isExistNote) {
+        toggleNotes();
+        toggleHero();
+    }
 }
 
 function createNote({ title, content }) {
@@ -62,11 +81,11 @@ function createNote({ title, content }) {
 }
 
 function constructNote(note) {
-    const liNote = document.createElement("li");
-    liNote.classList.add("list__note", "note");
-    liNote.id = `Note ${note.key}`;
+    const $liNote = document.createElement("li");
+    $liNote.classList.add("list__note", "note");
+    $liNote.key = note.key;
 
-    liNote.innerHTML = `
+    $liNote.innerHTML = `
         <div class="note__options options">
             <button class="options__addfavorite note__button button" title="Agregar a favoritos">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 28 28" fill="none">
@@ -102,8 +121,8 @@ function constructNote(note) {
             </article>
         </button>`;
 
-    $listNotes.insertBefore(liNote, $listNotes.firstElementChild);
-    refreshNoteEventListeners(liNote);
+    $listNotes.insertBefore($liNote, $listNotes.firstElementChild);
+    refreshNoteEventListeners($liNote);
 }
 
 function submitCreateNote(evt) {

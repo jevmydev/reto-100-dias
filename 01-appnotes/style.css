@@ -135,6 +135,10 @@ body {
     position: relative;
 }
 
+.note--favorite {
+    order: -1;
+}
+
 .note__action {
     width: 100%;
     height: 100%;
@@ -229,6 +233,11 @@ body {
     color: var(--bg-secondary-hover);
 }
 
+.options__addfavorite--favorite,
+.options__addfavorite--favorite:hover {
+    background-color: #ffff00;
+}
+
 .list__addnote__button {
     padding: 2rem;
     height: 100%;
@@ -290,6 +299,10 @@ body {
 .createnote__submit {
     padding: 1rem;
     font-size: var(--font-size-m);
+}
+
+.createnote__submit--disabled {
+    display: none;
 }
 
 @media only screen and (max-width: 800px) {

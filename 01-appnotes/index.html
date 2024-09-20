@@ -16,7 +16,7 @@
         <header class="header">
             <div class="header__box box">
                 <nav class="header__nav nav">
-                    <a class="nav__link link" href="#">
+                    <a class="nav__link link" href="/">
                         <img class="nav__link__icon" src="/favicon.webp" alt="Icono de AppNotes" />
                         <h1 class="nav__link__title title">AppNotes</h1>
                     </a>
@@ -74,7 +74,7 @@
                             </button>
                         </div>
                         <div class="createnote__inner">
-                            <h2 class="createnote__title title">Crea una nota</h2>
+                            <h2 class="createnote__title title">Gestiona tu nota</h2>
                             <form class="createnote__form">
                                 <label class="createnote__label">
                                     Título
@@ -84,7 +84,8 @@
                                     Contenido
                                     <textarea class="createnote__textarea" autocomplete="off" placeholder="Escribe aquí el contenido de tu nota" name="content" required></textarea>
                                 </label>
-                                <button class="createnote__submit createnote__button button" type="submit">Guardar nota</button>
+                                <button class="createnote__submit createnote__submit--edit createnote__submit--disabled createnote__button button" type="button">Editar nota</button>
+                                <button class="createnote__submit createnote__submit--create createnote__button button" type="submit">Guardar nota</button>
                             </form>
                         </div>
                     </div>

@@ -67,7 +67,6 @@ body {
 }
 
 .link:hover,
-.options__addfavorite:hover,
 .options__delete:hover,
 .createnote__exit__button:hover {
     transform: scale(1.05);
@@ -116,7 +115,8 @@ body {
 
 .hero__intro__button:hover,
 .list__addnote__button:hover,
-.createnote__submit:hover {
+.createnote__submit:hover,
+.options__addfavorite:hover {
     background-color: var(--bg-secondary-hover);
     transform: scale(1.05);
 }

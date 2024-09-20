@@ -21,6 +21,27 @@ function refreshPrincipalPage() {
     else toggleHero();
 }
 
+function refreshNoteEventListeners(liNote) {
+    const { 0: $options, 1: $actionNote } = liNote.children;
+    const { 0: $favoriteOption, 1: $deleteOption } = $options.children;
+
+    $actionNote.addEventListener("click", actionNote);
+    $favoriteOption.addEventListener("click", favoriteNote);
+    $deleteOption.addEventListener("click", deleteNote);
+}
+
+function actionNote() {
+    console.log("action");
+}
+
+function favoriteNote() {
+    console.log("favorite");
+}
+
+function deleteNote() {
+    console.log("delete");
+}
+
 function createNote({ title, content }) {
     const listNotesChildrens = $listNotes.children;
     const lengthListNotes = listNotesChildrens.length;
@@ -43,7 +64,7 @@ function createNote({ title, content }) {
 function constructNote(note) {
     const liNote = document.createElement("li");
     liNote.classList.add("list__note", "note");
-    liNote.id = `Key: ${note.key}`;
+    liNote.id = `Note ${note.key}`;
 
     liNote.innerHTML = `
         <div class="note__options options">
@@ -82,6 +103,7 @@ function constructNote(note) {
         </button>`;
 
     $listNotes.insertBefore(liNote, $listNotes.firstElementChild);
+    refreshNoteEventListeners(liNote);
 }
 
 function submitCreateNote(evt) {

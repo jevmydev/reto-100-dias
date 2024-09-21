@@ -184,6 +184,8 @@ body {
 
 .note__title {
     font-size: var(--font-size-l);
+    max-width: 10ch;
+    white-space: nowrap;
     display: -webkit-box;
     line-clamp: 1;
     -webkit-line-clamp: 1;
@@ -192,6 +194,7 @@ body {
 }
 
 .note__description {
+    max-width: 30ch;
     font-size: var(--font-size-m);
     display: -webkit-box;
     line-clamp: 4;

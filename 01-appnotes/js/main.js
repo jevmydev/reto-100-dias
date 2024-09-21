@@ -1,18 +1,20 @@
-import { toggleHero, toggleNotes, toggleCreateNote, isExistNotes } from "./utils.js";
+import { $$, toggleHero, toggleNotes, toggleCreateNote, isExistNotes } from "./utils.js";
 import { $listNotes, $addNoteBtn, $createFirstNoteBtn, $formCreateNote, $inputTitle, $inputContent, $closeCreateBtn, $editSubmit, $createSubmit } from "./constants.js";
 import { setStorage, getStorage } from "./storage.js";
 
 function init() {
-    const lengthStorage = localStorage.length;
-
-    for (let key = 1; key <= lengthStorage; key++) {
-        const note = getStorage({ key, isJSON: true });
-        if (note === null) continue;
-
-        constructNote(note);
-    }
-
+    refreshNotes();
     refreshPrincipalPage();
+}
+
+function refreshNotes() {
+    const notes = $$(".note");
+    notes.forEach((note) => note.remove());
+
+    Object.keys(localStorage).forEach((key) => {
+        const note = getStorage({ key, isJSON: true });
+        constructNote(note);
+    });
 }
 
 function refreshPrincipalPage() {
@@ -32,7 +34,9 @@ function refreshNoteEventListeners($liNote) {
 }
 
 function actionNote($liNote) {
-    addNote();
+    toggleNotes();
+    toggleCreateNote();
+
     $createSubmit.classList.add("createnote__submit--disabled");
     $editSubmit.classList.remove("createnote__submit--disabled");
 
@@ -41,11 +45,33 @@ function actionNote($liNote) {
 
     $inputTitle.value = note.title;
     $inputContent.value = note.content;
+    $formCreateNote.isFavorite = note.isFavorite;
+    $formCreateNote.key = key;
+}
+
+function editNote() {
+    const key = $formCreateNote.key;
+    const isFavorite = $formCreateNote.isFavorite;
+
+    const formData = new FormData($formCreateNote);
+    const noteValues = Object.fromEntries(formData);
+
+    if (noteValues.title === "" || noteValues.content === "") throw new Error("Un campo del formulario está vacio"); // In case of error...
+
+    createNote({ key, isFavorite, ...noteValues });
+    refreshNotes();
+    closeCreateNote();
 }
 
 function favoriteNote($favoriteOption, $liNote) {
+    const key = $liNote.key;
+    const note = getStorage({ key, isJSON: true });
+
+    const isNoteFavoriteMarked = $liNote.classList.toggle("note--favorite");
     $favoriteOption.classList.toggle("options__addfavorite--favorite");
-    $liNote.classList.toggle("note--favorite");
+
+    note.isFavorite = isNoteFavoriteMarked;
+    setStorage({ key, value: note });
 }
 
 function deleteNote($liNote) {
@@ -61,7 +87,7 @@ function deleteNote($liNote) {
     }
 }
 
-function createNote({ title, content }) {
+function createNote({ key = null, title, content, isFavorite = false }) {
     const listNotesChildrens = $listNotes.children;
     const lengthListNotes = listNotesChildrens.length;
 
@@ -70,10 +96,11 @@ function createNote({ title, content }) {
     const formatDate = stringDate.replaceAll("/", "-");
 
     const note = {
-        key: lengthListNotes,
+        key: key ?? lengthListNotes,
         date: formatDate,
         title: title,
-        content: content
+        content: content,
+        isFavorite: isFavorite
     };
 
     setStorage({ key: note.key, value: note });
@@ -81,13 +108,17 @@ function createNote({ title, content }) {
 }
 
 function constructNote(note) {
+    const isFavoriteNote = note.isFavorite;
+
     const $liNote = document.createElement("li");
+
     $liNote.classList.add("list__note", "note");
+    if (isFavoriteNote) $liNote.classList.add("note--favorite");
     $liNote.key = note.key;
 
     $liNote.innerHTML = `
         <div class="note__options options">
-            <button class="options__addfavorite note__button button" title="Agregar a favoritos">
+            <button class="options__addfavorite note__button button${isFavoriteNote ? " options__addfavorite--favorite" : ""}" title="Agregar a favoritos">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 28 28" fill="none">
                     <path
                     clip-rule="evenodd"
@@ -152,6 +183,8 @@ function createFirstNote() {
 }
 
 function addNote() {
+    $editSubmit.classList.add("createnote__submit--disabled");
+    $createSubmit.classList.remove("createnote__submit--disabled");
     toggleNotes();
     toggleCreateNote();
 }
@@ -162,5 +195,6 @@ $closeCreateBtn.addEventListener("click", closeCreateNote);
 $createFirstNoteBtn.addEventListener("click", createFirstNote);
 
 $addNoteBtn.addEventListener("click", addNote);
+$editSubmit.addEventListener("click", editNote);
 
 init();

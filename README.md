@@ -5,9 +5,10 @@ tecnologías.
 
 ## Proyectos ❤️
 
-| #   | Proyecto     | Descripción                                  | Código                                                                          | Enlace                          |
-| --- | ------------ | -------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------- |
-| 01  | **AppNotes** | Crea, etiqueta, elimina y organiza tus notas | [/01-appnotes](https://github.com/jevmydev/reto-100-dias/tree/main/01-appnotes) | https://01-appnotes.netlify.app |
+| #   | Proyecto            | Descripción                                  | Código                                                                                        | Enlace                          |
+| --- | ------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- |
+| 01  | **AppNotes**        | Crea, etiqueta, elimina y organiza tus notas | [/01-appnotes](https://github.com/jevmydev/reto-100-dias/tree/main/01-appnotes)               | https://01-appnotes.netlify.app |
+| 02  | **Escala de notas** | Escala notas, calcula tus promedios y más    | [/02-escala-de-notas](https://github.com/jevmydev/reto-100-dias/tree/main/02-escala-de-notas) |                -                | 
 
 ## 01 - AppNotes 📓
 
@@ -16,6 +17,10 @@ El proyecto 01 es "AppNotes", una aplicación simple para crear y organizar nota
 👉 Enlace: https://01-appnotes.netlify.app/ <br /> 🧑‍💻 Código: [/01-appnotes](https://github.com/jevmydev/reto-100-dias/tree/main/01-appnotes)
 
 ![Hero de AppNotes](./images/appnotes/hero.png) ![Notas de AppNotes](./images/appnotes/notes.png)
+
+## 02 - Escala de notas 📓+
+
+El proyecto 02 es "Escala de notas", donde podemos calcula promedios, ver una tabla de calificaciones y seguir un progreso académico.
 
 ### Rework ⭐
 

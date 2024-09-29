@@ -10,7 +10,8 @@ module.exports = {
         es2021: true,
         node: true
     },
-    extends: ["eslint:recommended", "plugin:prettier/recommended", "prettier"],
+    extends: ["eslint:recommended", "plugin:react/recommended", "prettier"],
+    plugins: ["react"],
     overrides: [
         {
             env: {
@@ -24,7 +25,10 @@ module.exports = {
     ],
     parserOptions: {
         ecmaVersion: "latest",
-        sourceType: "module"
+        sourceType: "module",
+        ecmaFeatures: {
+            jsx: true
+        }
     },
     rules: {
         indent: [RULES.WARN, 4],

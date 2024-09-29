@@ -23,10 +23,9 @@
     },
     "homepage": "https://github.com/jevmydev/reto-100-dias#readme",
     "devDependencies": {
+        "eslint": "8.35.0",
         "eslint-config-prettier": "9.1.0",
+        "eslint-plugin-react": "7.32.2",
         "prettier": "3.3.3"
-    },
-    "dependencies": {
-        "eslint": "8.35.0"
     }
 }

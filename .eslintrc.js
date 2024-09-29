@@ -10,7 +10,7 @@ module.exports = {
         es2021: true,
         node: true
     },
-    extends: ["eslint:recommended", "prettier"],
+    extends: ["eslint:recommended", "plugin:prettier/recommended", "prettier"],
     overrides: [
         {
             env: {
@@ -29,6 +29,9 @@ module.exports = {
     rules: {
         indent: [RULES.WARN, 4],
         quotes: [RULES.WARN, "double"],
-        semi: [RULES.WARN, "always"]
+        semi: [RULES.WARN, "always"],
+        "linebreak-style": RULES.OFF,
+        "react/react-in-jsx-scope": RULES.OFF,
+        "react/prop-types": RULES.OFF
     }
 };

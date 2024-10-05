@@ -8,7 +8,7 @@ tecnologías.
 | #   | Proyecto            | Descripción                                  | Código                                                                                        | Enlace                          |
 | --- | ------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- |
 | 01  | **AppNotes**        | Crea, etiqueta, elimina y organiza tus notas | [/01-appnotes](https://github.com/jevmydev/reto-100-dias/tree/main/01-appnotes)               | https://01-appnotes.netlify.app |
-| 02  | **Escala de notas** | Escala notas, calcula tus promedios y más    | [/02-escala-de-notas](https://github.com/jevmydev/reto-100-dias/tree/main/02-escala-de-notas) |                -                | 
+| 02  | **Escala de notas** | Escala notas, calcula tus promedios y más    | [/02-escala-de-notas](https://github.com/jevmydev/reto-100-dias/tree/main/02-escala-de-notas) | -                               |
 
 ## 01 - AppNotes 📓
 

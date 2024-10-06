@@ -1,8 +1,13 @@
 import { useState } from "react";
-import { defaultGradeData } from "../constants/defaultValues";
+
+import { GRADE_DATA_DEFAULT, INCREMENT_DEFAULT } from "../constants/defaultValues";
+import { formatGrade } from "../utils/formats";
 
 export const useGradesData = () => {
-    const [gradeData, setGradeData] = useState(defaultGradeData);
+    const [gradeData, setGradeData] = useState(GRADE_DATA_DEFAULT);
+    const [increment, useIncrement] = useState(INCREMENT_DEFAULT);
+
+    const updateIncrement = (e) => useIncrement(e.target.value);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -10,15 +15,10 @@ export const useGradesData = () => {
         const formData = new FormData(e.target);
         const newGradeData = Object.fromEntries(formData);
 
-        newGradeData.maxScore = parseFloat(newGradeData.maxScore);
-        newGradeData.maxGrade = parseFloat(newGradeData.maxGrade);
-        newGradeData.minGrade = parseFloat(newGradeData.minGrade);
-        newGradeData.approvalGrade = parseFloat(newGradeData.approvalGrade);
-        newGradeData.exigency = parseFloat(newGradeData.exigency) / 100;
-        newGradeData.increment = parseFloat(newGradeData.increment);
+        const formatNewGradeData = formatGrade({ gradeData: newGradeData });
 
-        setGradeData(newGradeData);
+        setGradeData(formatNewGradeData);
     };
 
-    return { gradeData, handleSubmit };
+    return { gradeData, increment, updateIncrement, handleSubmit };
 };

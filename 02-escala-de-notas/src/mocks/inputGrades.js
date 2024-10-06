@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import { APPROVAL_GRADE_DEFAULT, EXIGENCY_DEFAAULT, MAX_GRADE_DEFAULT, MAX_SCORE_DEFAULT, MIN_GRADE_DEFAULT } from "../constants/defaultValues";
+import { APPROVAL_GRADE_DEFAULT, EXIGENCY_DEFAULT, MAX_GRADE_DEFAULT, MAX_SCORE_DEFAULT, MIN_GRADE_DEFAULT } from "../constants/defaultValues";
 
 export const inputGrades = [
     {
@@ -39,7 +39,7 @@ export const inputGrades = [
         label: "Exigencia (%)",
         name: "exigency",
         type: "number",
-        defaultValue: EXIGENCY_DEFAAULT,
+        defaultValue: EXIGENCY_DEFAULT,
         min: 0,
         max: 100
     }

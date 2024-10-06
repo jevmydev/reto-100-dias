@@ -5,10 +5,10 @@ tecnologías.
 
 ## Proyectos ❤️
 
-| #   | Proyecto            | Descripción                                  | Código                                                                                        | Enlace                          |
-| --- | ------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- |
-| 01  | **AppNotes**        | Crea, etiqueta, elimina y organiza tus notas | [/01-appnotes](https://github.com/jevmydev/reto-100-dias/tree/main/01-appnotes)               | https://01-appnotes.netlify.app |
-| 02  | **Escala de notas** | Escala notas, calcula tus promedios y más    | [/02-escala-de-notas](https://github.com/jevmydev/reto-100-dias/tree/main/02-escala-de-notas) | -                               |
+| #   | Proyecto            | Descripción                                  | Código                                                                                        | Enlace                               |
+| --- | ------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------ |
+| 01  | **AppNotes**        | Crea, etiqueta, elimina y organiza tus notas | [/01-appnotes](https://github.com/jevmydev/reto-100-dias/tree/main/01-appnotes)               | https://01-appnotes.netlify.app      |
+| 02  | **Escala de notas** | Escala notas, calcula tus promedios y más    | [/02-escala-de-notas](https://github.com/jevmydev/reto-100-dias/tree/main/02-escala-de-notas) | https://escala-de-notas.netlify.app/ |
 
 ## 01 - AppNotes 📓
 
@@ -20,7 +20,11 @@ El proyecto 01 es "AppNotes", una aplicación simple para crear y organizar nota
 
 ## 02 - Escala de notas 📓+
 
-El proyecto 02 es "Escala de notas", donde podemos calcula promedios, ver una tabla de calificaciones y seguir un progreso académico.
+El proyecto 02 es "Escala de notas", donde podemos calcular escalas, ver una tabla de calificaciones y avanzar académicamente.
+
+👉 Enlace: https://escala-de-notas.netlify.app/ <br /> 🧑‍💻 Código: [/02-escala-de-notas](https://github.com/jevmydev/reto-100-dias/tree/main/02-escala-de-notas)
+
+![Logo de Escala de notas](./images/escala-de-notas/logo.webp) ![Hero de Escala de notas](./images/escala-de-notas/hero.png)
 
 ### Rework ⭐
 

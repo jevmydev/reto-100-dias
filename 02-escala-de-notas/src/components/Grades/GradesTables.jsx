@@ -1,4 +1,4 @@
-import { trunc } from "../../constants/functions";
+import { v4 as uuid } from "uuid";
 
 const GradesRow = ({ grade }) => {
     const { score, note, isOdd, isBelowApprove } = grade;
@@ -25,56 +25,22 @@ const GradesTable = ({ grades }) => {
             </thead>
             <tbody className="bg-slate-800">
                 {grades.map((grade) => (
-                    <GradesRow key={grade.score} grade={grade} />
+                    <GradesRow key={uuid()} grade={grade} />
                 ))}
             </tbody>
         </table>
     );
 };
 
-export const GradesTables = ({ gradeData }) => {
-    const { maxScore, maxGrade, minGrade, approvalGrade, exigency, increment, order } = gradeData;
-    const grades = [];
-
-    for (let score = 0; score <= maxScore; score += increment) {
-        let note = null;
-        const exigencyScore = exigency * maxScore;
-
-        if (score < exigencyScore) note = (approvalGrade - minGrade) * (score / exigencyScore) + minGrade;
-        else note = (maxGrade - approvalGrade) * ((score - exigencyScore) / (maxScore * (1 - exigency))) + approvalGrade;
-
-        note = parseFloat(trunc(note, 2).toFixed(1));
-
-        const grade = {
-            score,
-            note,
-            isBelowApprove: note < approvalGrade,
-            isOdd: score % 2 === 1
-        };
-
-        grades.push(grade);
-    }
-
-    const sortedGrades = order === "increasing" ? grades : grades.reverse();
-
-    const chunkArray = (array, chunkSize) => {
-        const result = [];
-        for (let i = 0; i < array.length; i += chunkSize) {
-            result.push(array.slice(i, i + chunkSize));
-        }
-        return result;
-    };
-
-    const gradesChunks = chunkArray(sortedGrades, 10);
-
+export const GradesTables = ({ gradesChunk }) => {
     return (
         <div className="w-4/5 h-full flex gap-6 flex-col border-l border-slate-900 pl-6">
             <div>
                 <h2 className="text-3xl font-bold text-slate-100">Tabla de notas</h2>
             </div>
             <div className="flex gap-4 flex-wrap text-sm">
-                {gradesChunks.map((chunk, index) => (
-                    <GradesTable key={index} grades={chunk} />
+                {gradesChunk.map((grades) => (
+                    <GradesTable key={uuid()} grades={grades} />
                 ))}
             </div>
         </div>

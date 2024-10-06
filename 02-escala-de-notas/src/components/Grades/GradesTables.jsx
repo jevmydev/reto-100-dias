@@ -34,11 +34,11 @@ const GradesTable = ({ grades }) => {
 
 export const GradesTables = ({ gradesChunk }) => {
     return (
-        <div className="w-4/5 h-full flex gap-6 flex-col border-l border-slate-900 pl-6">
-            <div>
+        <div className="md:w-2/3 lg:w-4/5 h-full flex gap-6 flex-col sm:border-l sm:border-slate-900">
+            <div className="flex justify-center">
                 <h2 className="text-3xl font-bold text-slate-100">Tabla de notas</h2>
             </div>
-            <div className="flex gap-4 flex-wrap text-sm">
+            <div className="flex justify-center gap-4 flex-wrap text-sm">
                 {gradesChunk.map((grades) => (
                     <GradesTable key={uuid()} grades={grades} />
                 ))}

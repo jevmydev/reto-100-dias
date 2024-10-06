@@ -1,5 +1,5 @@
 export const FavIcon = ({ width = "w-11", height = "h-11" }) => {
-    return <img className={`${width} ${height} aspect-square rounded-xl object-cover`} src="../../favicon.webp" alt="Icono de NoteScale" decoding="async" />;
+    return <img className={`${width} ${height} aspect-square rounded-xl object-cover`} src="/favicon.webp" alt="Icono de NoteScale" decoding="async" />;
 };
 
 export const UpIcon = ({ width = "w-5", height = "h-5" }) => {

@@ -29,8 +29,8 @@ body {
     user-select: none;
     position: fixed;
     z-index: -1;
-    bottom: .25rem;
-    right: .25rem;
+    bottom: 0.25rem;
+    right: 0.25rem;
 }
 
 .about__title {

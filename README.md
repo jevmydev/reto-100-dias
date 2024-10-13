@@ -5,10 +5,11 @@ tecnologías.
 
 ## Proyectos ❤️
 
-| #   | Proyecto            | Descripción                                  | Código                                                                                        | Enlace                               |
-| --- | ------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------ |
-| 01  | **AppNotes**        | Crea, etiqueta, elimina y organiza tus notas | [/01-appnotes](https://github.com/jevmydev/reto-100-dias/tree/main/01-appnotes)               | https://01-appnotes.netlify.app      |
-| 02  | **Escala de notas** | Escala notas, calcula tus promedios y más    | [/02-escala-de-notas](https://github.com/jevmydev/reto-100-dias/tree/main/02-escala-de-notas) | https://escala-de-notas.netlify.app/ |
+| #   | Proyecto            | Descripción                                      | Código                                                                                        | Enlace                               |
+| --- | ------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------- | ------------------------------------ |
+| 01  | **AppNotes**        | Crea, etiqueta, elimina y organiza tus notas     | [/01-appnotes](https://github.com/jevmydev/reto-100-dias/tree/main/01-appnotes)               | https://01-appnotes.netlify.app      |
+| 02  | **Escala de notas** | Escala notas, calcula tus promedios y más        | [/02-escala-de-notas](https://github.com/jevmydev/reto-100-dias/tree/main/02-escala-de-notas) | https://escala-de-notas.netlify.app/ |
+| 03  | **Mathpaint**       | Dibuja en toda la web tus cálculos matemáticos   | [/03-mathpaint](https://github.com/jevmydev/reto-100-dias/tree/main/03-mathpaint)             | https://mathpaint.netlify.app/       |
 
 ## 01 - AppNotes 📓
 
@@ -25,6 +26,14 @@ El proyecto 02 es "Escala de notas", donde podemos calcular escalas, ver una tab
 👉 Enlace: https://escala-de-notas.netlify.app/ <br /> 🧑‍💻 Código: [/02-escala-de-notas](https://github.com/jevmydev/reto-100-dias/tree/main/02-escala-de-notas)
 
 ![Logo de Escala de notas](./images/escala-de-notas/logo.webp) ![Hero de Escala de notas](./images/escala-de-notas/hero.png)
+
+## 03 - MathPaint ✍️🔢
+
+El proyecto 03 es "MathPaint", un sitio donde puedes dibujar en toda la web tus cálculos matemáticos.
+
+👉 Enlace: https://mathpaint.netlify.app/ <br /> 🧑‍💻 Código: [/03-mathpaint](https://github.com/jevmydev/reto-100-dias/tree/main/03-mathpaint)
+
+![Logo de Mathpaint](./images/mathpaint/logo.webp) ![Hero de Mathpaint](./images/mathpaint/hero.png)
 
 ### Rework ⭐
 

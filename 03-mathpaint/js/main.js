@@ -22,22 +22,29 @@ function init() {
 
 function draw(stroke) {
     context.beginPath();
-    context.lineWidth = stroke.width;
+    context.lineWidth = stroke.width * canvasState.zoom;
     context.strokeStyle = stroke.color;
     context.lineCap = stroke.lineCap;
     context.lineJoin = stroke.lineJoin;
 
-    context.moveTo(stroke.startX + canvasState.offsetX, stroke.startY + canvasState.offsetY);
+    context.moveTo((stroke.startX + canvasState.offsetX) * canvasState.zoom, (stroke.startY + canvasState.offsetY) * canvasState.zoom);
     stroke.points.forEach((point) => {
-        context.lineTo(point.x + canvasState.offsetX, point.y + canvasState.offsetY);
+        context.lineTo((point.x + canvasState.offsetX) * canvasState.zoom, (point.y + canvasState.offsetY) * canvasState.zoom);
     });
     context.stroke();
 }
 
-const mouseDragging = (e) => {
+function redrawStrokes() {
+    context.clearRect(0, 0, mathpaint.width, mathpaint.height);
+    context.save();
+    strokes.forEach((stroke) => draw(stroke));
+    context.restore();
+}
+
+function mouseDragging(e) {
     if (canvasState.isDragging) {
-        const dx = e.clientX - canvasState.dragStartX;
-        const dy = e.clientY - canvasState.dragStartY;
+        const dx = (e.clientX - canvasState.dragStartX) / canvasState.zoom;
+        const dy = (e.clientY - canvasState.dragStartY) / canvasState.zoom;
 
         canvasState.offsetX += dx;
         canvasState.offsetY += dy;
@@ -45,19 +52,26 @@ const mouseDragging = (e) => {
         canvasState.dragStartX = e.clientX;
         canvasState.dragStartY = e.clientY;
 
-        context.clearRect(0, 0, mathpaint.width, mathpaint.height);
         redrawStrokes();
     }
-};
+}
 
-const mouseDown = (e) => {
+function mouseDown(e) {
     const isLeftMouseDown = e.button === 0;
 
     if (isLeftMouseDown) {
-        canvasState.startX = e.offsetX - canvasState.offsetX;
-        canvasState.startY = e.offsetY - canvasState.offsetY;
+        canvasState.startX = e.offsetX / canvasState.zoom - canvasState.offsetX;
+        canvasState.startY = e.offsetY / canvasState.zoom - canvasState.offsetY;
 
-        const newStroke = new Stroke({ startX: canvasState.startX, startY: canvasState.startY, color: "#020202", width: 4, lineCap: "rounded", lineJoin: "rounded" });
+        const newStroke = new Stroke({
+            startX: canvasState.startX,
+            startY: canvasState.startY,
+            color: "#020202",
+            width: 4,
+            lineCap: "rounded",
+            lineJoin: "rounded"
+        });
+
         strokes.push(newStroke);
         newStroke.addPoint(canvasState.startX, canvasState.startY);
 
@@ -70,21 +84,20 @@ const mouseDown = (e) => {
         canvasState.dragStartY = e.clientY;
         mathpaint.addEventListener("mousemove", mouseDragging);
     }
-};
+}
 
-const mouseMoving = (e) => {
+function mouseMoving(e) {
     const currentStroke = strokes[strokes.length - 1];
-
     if (currentStroke) {
-        const adjustedX = e.offsetX - canvasState.offsetX;
-        const adjustedY = e.offsetY - canvasState.offsetY;
+        const adjustedX = e.offsetX / canvasState.zoom - canvasState.offsetX;
+        const adjustedY = e.offsetY / canvasState.zoom - canvasState.offsetY;
 
         currentStroke.addPoint(adjustedX, adjustedY);
         draw(currentStroke);
     }
-};
+}
 
-const mouseUp = (e) => {
+function mouseUp(e) {
     const isLeftMouseDown = e.button === 0;
 
     if (isLeftMouseDown) {
@@ -94,9 +107,9 @@ const mouseUp = (e) => {
         mathpaint.classList.remove("mathpaint__canvas--cursorgrabbing");
         mathpaint.removeEventListener("mousemove", mouseDragging);
     }
-};
+}
 
-const mouseLeave = () => {
+function mouseLeave() {
     if (canvasState.isDragging) {
         canvasState.isDragging = false;
         mathpaint.classList.remove("mathpaint__canvas--cursorgrabbing");
@@ -104,19 +117,15 @@ const mouseLeave = () => {
 
     mathpaint.removeEventListener("mousemove", mouseMoving);
     mathpaint.removeEventListener("mousemove", mouseDragging);
-};
+}
 
-const redrawStrokes = () => {
-    strokes.forEach((stroke) => draw(stroke));
-};
-
-const resizeMathPaint = () => {
+function resizeMathPaint() {
     mathpaint.width = window.innerWidth;
     mathpaint.height = window.innerHeight;
     redrawStrokes();
-};
+}
 
-const handleScroll = (e) => {
+function handleScroll(e) {
     e.preventDefault();
     const isScrollUp = e.deltaY < 0;
 
@@ -125,9 +134,8 @@ const handleScroll = (e) => {
 
     canvasState.zoom = Math.min(Math.max(canvasState.zoom, 0.5), 2);
 
-    mathpaint.style.transform = `scale(${canvasState.zoom})`;
-    mathpaint.style.transformOrigin = "top left";
-};
+    redrawStrokes();
+}
 
 mathpaint.addEventListener("mousedown", mouseDown);
 mathpaint.addEventListener("mouseup", mouseUp);

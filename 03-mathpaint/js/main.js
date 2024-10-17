@@ -15,6 +15,7 @@ const canvasState = {
 };
 
 const strokes = [];
+const redoStack = [];
 
 function init() {
     resizeMathPaint();
@@ -73,6 +74,7 @@ function mouseDown(e) {
         });
 
         strokes.push(newStroke);
+        redoStack.length = 0;
         newStroke.addPoint(canvasState.startX, canvasState.startY);
 
         draw(newStroke);
@@ -125,6 +127,34 @@ function resizeMathPaint() {
     redrawStrokes();
 }
 
+function undo() {
+    if (strokes.length > 0) {
+        const stroke = strokes.pop();
+        redoStack.push(stroke);
+        redrawStrokes();
+    }
+}
+
+function redo() {
+    if (redoStack.length > 0) {
+        const stroke = redoStack.pop();
+        strokes.push(stroke);
+        redrawStrokes();
+    }
+}
+
+function handleKeyboardShortcuts(e) {
+    if (e.ctrlKey) {
+        if (e.key === "z") {
+            e.preventDefault();
+            undo();
+        } else if (e.key === "y") {
+            e.preventDefault();
+            redo();
+        }
+    }
+}
+
 function handleScroll(e) {
     e.preventDefault();
     const isScrollUp = e.deltaY < 0;
@@ -142,6 +172,7 @@ mathpaint.addEventListener("mouseup", mouseUp);
 mathpaint.addEventListener("mouseleave", mouseLeave);
 mathpaint.addEventListener("contextmenu", (e) => e.preventDefault());
 
+window.addEventListener("keydown", handleKeyboardShortcuts);
 window.addEventListener("resize", resizeMathPaint);
 window.addEventListener("wheel", handleScroll, { passive: false });
 

@@ -42,7 +42,7 @@ El proyecto 04 es "TimeToEvent", tu generador favorito de contador de tiempo has
 
 👉 Enlace: https://timetoevent.netlify.app/ <br /> 🧑‍💻 Código: [/04-timetoevent](https://github.com/jevmydev/reto-100-dias/tree/main/04-timetoevent)
 
-![Logo de Timetoevent](./images/timetoevent/logo.webp) ![Hero de Timetoevent](./images/timetoevent/hero.webp)
+![Logo de Timetoevent](./images/timetoevent/logo.webp) ![Hero de Timetoevent](./images/timetoevent/hero.png)
 
 ### Rework ⭐
 

@@ -7,7 +7,7 @@ tecnologías.
 
 | #   | Proyecto            | Descripción                                      | Código                                                                                        | Enlace                               |
 | --- | ------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------- | ------------------------------------ |
-| 01  | **AppNotes**        | Crea, etiqueta, elimina y organiza tus notas     | [/01-appnotes](https://github.com/jevmydev/reto-100-dias/tree/main/01-appnotes)               | https://01-appnotes.netlify.app      |
+| 01  | **AppNotes**        | Crea, etiqueta, elimina y organiza tus notas     | [/01-appnotes](https://github.com/jevmydev/reto-100-dias/tree/main/01-appnotes)               | https://theappnotes.netlify.app      |
 | 02  | **Escala de notas** | Escala notas, calcula tus promedios y más        | [/02-escala-de-notas](https://github.com/jevmydev/reto-100-dias/tree/main/02-escala-de-notas) | https://escala-de-notas.netlify.app/ |
 | 03  | **Mathpaint**       | Dibuja en toda la web tus cálculos matemáticos   | [/03-mathpaint](https://github.com/jevmydev/reto-100-dias/tree/main/03-mathpaint)             | https://mathpaint.netlify.app/       |
 
@@ -15,7 +15,7 @@ tecnologías.
 
 El proyecto 01 es "AppNotes", una aplicación simple para crear y organizar notas.
 
-👉 Enlace: https://01-appnotes.netlify.app/ <br /> 🧑‍💻 Código: [/01-appnotes](https://github.com/jevmydev/reto-100-dias/tree/main/01-appnotes)
+👉 Enlace: https://theappnotes.netlify.app/ <br /> 🧑‍💻 Código: [/01-appnotes](https://github.com/jevmydev/reto-100-dias/tree/main/01-appnotes)
 
 ![Hero de AppNotes](./images/appnotes/hero.png) ![Notas de AppNotes](./images/appnotes/notes.png)
 

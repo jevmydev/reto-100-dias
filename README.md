@@ -5,12 +5,12 @@ tecnologías.
 
 ## Proyectos ❤️
 
-| #   | Proyecto            | Descripción                                      | Código                                                                                        | Enlace                               |
-| --- | ------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------- | ------------------------------------ |
-| 01  | **AppNotes**        | Crea, etiqueta, elimina y organiza tus notas     | [/01-appnotes](https://github.com/jevmydev/reto-100-dias/tree/main/01-appnotes)               | https://theappnotes.netlify.app      |
-| 02  | **Escala de notas** | Escala notas, calcula tus promedios y más        | [/02-escala-de-notas](https://github.com/jevmydev/reto-100-dias/tree/main/02-escala-de-notas) | https://escala-de-notas.netlify.app/ |
-| 03  | **Mathpaint**       | Dibuja en toda la web tus cálculos matemáticos   | [/03-mathpaint](https://github.com/jevmydev/reto-100-dias/tree/main/03-mathpaint)             | https://mathpaint.netlify.app/       |
-| 04  | **TimeToEvent**     | Contador regresivo hasta tu fecha de tu evento   | [/04-timetoevent](https://github.com/jevmydev/reto-100-dias/tree/main/04-timetoevent)         | https://timetoevent.netlify.app/     |
+| #   | Proyecto            | Descripción                                    | Código                                                                                        | Enlace                               |
+| --- | ------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------ |
+| 01  | **AppNotes**        | Crea, etiqueta, elimina y organiza tus notas   | [/01-appnotes](https://github.com/jevmydev/reto-100-dias/tree/main/01-appnotes)               | https://theappnotes.netlify.app      |
+| 02  | **Escala de notas** | Escala notas, calcula tus promedios y más      | [/02-escala-de-notas](https://github.com/jevmydev/reto-100-dias/tree/main/02-escala-de-notas) | https://escala-de-notas.netlify.app/ |
+| 03  | **Mathpaint**       | Dibuja en toda la web tus cálculos matemáticos | [/03-mathpaint](https://github.com/jevmydev/reto-100-dias/tree/main/03-mathpaint)             | https://mathpaint.netlify.app/       |
+| 04  | **TimeToEvent**     | Contador regresivo hasta tu fecha de tu evento | [/04-timetoevent](https://github.com/jevmydev/reto-100-dias/tree/main/04-timetoevent)         | https://timetoevent.netlify.app/     |
 
 ## 01 - AppNotes 📓
 

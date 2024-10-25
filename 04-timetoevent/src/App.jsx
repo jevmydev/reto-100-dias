@@ -1,4 +1,4 @@
-import Embed from "./components/embed/Embed";
+import Embed from "./components/Embed/Embed";
 import Hero from "./components/Hero/Hero";
 
 import "./main.css";

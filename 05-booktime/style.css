@@ -164,3 +164,22 @@ body {
 .time__value {
     color: var(--color-principal-opacity);
 }
+
+@media only screen and (max-width: 600px) {
+    .time {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .file {
+        width: auto;
+        height: auto;
+        gap: 1rem;
+    }
+
+    .file__drop {
+        padding: 2rem;
+    }
+}

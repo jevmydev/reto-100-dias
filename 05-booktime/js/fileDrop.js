@@ -1,5 +1,5 @@
-import * as pdfjsLib from "pdfjs-dist/webpack";
-pdfjsLib.GlobalWorkerOptions.workerSrc = new URL("pdfjs-dist/build/pdf.worker.js", import.meta.url).toString();
+import * as pdfjs from "/node_modules/pdfjs-dist/webpack";
+pdfjs.GlobalWorkerOptions.workerSrc = new URL("pdfjs-dist/build/pdf.worker.js", import.meta.url).toString();
 
 import { $ } from "./utils.js";
 import { constructTimeResults } from "./timeResults.js";
@@ -19,7 +19,7 @@ const book = {
 const readBookPDF = async (e) => {
     const { result } = e.target;
     const typedArray = new Uint8Array(result);
-    const pdf = await pdfjsLib.getDocument(typedArray).promise;
+    const pdf = await pdfjs.getDocument(typedArray).promise;
 
     let textContent = "";
 

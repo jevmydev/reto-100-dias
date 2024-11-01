@@ -1,4 +1,4 @@
-import * as pdfjs from "/node_modules/pdfjs-dist/webpack";
+import * as pdfjs from "pdfjs-dist/webpack";
 pdfjs.GlobalWorkerOptions.workerSrc = new URL("pdfjs-dist/build/pdf.worker.js", import.meta.url).toString();
 
 import { $ } from "./utils.js";

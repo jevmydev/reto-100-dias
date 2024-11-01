@@ -174,7 +174,7 @@ body {
 
 @media only screen and (max-width: 400px) {
     .file {
-        width: auto;
+        width: 100%;
         height: auto;
         gap: 1rem;
     }

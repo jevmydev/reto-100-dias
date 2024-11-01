@@ -51,7 +51,7 @@ El proyecto 05 es "BookTime", donde puedes calcular el tiempo que estarás leyen
 
 👉 Enlace: https://thebooktime.netlify.app/ <br /> 🧑‍💻 Código: [/05-booktime](https://github.com/jevmydev/reto-100-dias/tree/main/05-booktime)
 
-![Logo de BookTime](./images/booktime/logo.webp) ![Hero de BookTime](./images/BookTime/hero.png)
+![Logo de BookTime](./images/booktime/logo.webp) ![Hero de BookTime](./images/booktime/hero.png)
 
 ### Rework ⭐
 

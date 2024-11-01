@@ -11,6 +11,7 @@ tecnologías.
 | 02  | **Escala de notas** | Escala notas, calcula tus promedios y más      | [/02-escala-de-notas](https://github.com/jevmydev/reto-100-dias/tree/main/02-escala-de-notas) | https://escala-de-notas.netlify.app/ |
 | 03  | **Mathpaint**       | Dibuja en toda la web tus cálculos matemáticos | [/03-mathpaint](https://github.com/jevmydev/reto-100-dias/tree/main/03-mathpaint)             | https://mathpaint.netlify.app/       |
 | 04  | **TimeToEvent**     | Contador regresivo hasta tu fecha de tu evento | [/04-timetoevent](https://github.com/jevmydev/reto-100-dias/tree/main/04-timetoevent)         | https://timetoevent.netlify.app/     |
+| 05  | **BookTime**        | Calcula el tiempo que estarás leyendo un libro | [/05-booktime](https://github.com/jevmydev/reto-100-dias/tree/main/05-booktime)               | https://thebooktime.netlify.app/     |
 
 ## 01 - AppNotes 📓
 
@@ -43,6 +44,14 @@ El proyecto 04 es "TimeToEvent", tu generador favorito de contador de tiempo has
 👉 Enlace: https://timetoevent.netlify.app/ <br /> 🧑‍💻 Código: [/04-timetoevent](https://github.com/jevmydev/reto-100-dias/tree/main/04-timetoevent)
 
 ![Logo de Timetoevent](./images/timetoevent/logo.webp) ![Hero de Timetoevent](./images/timetoevent/hero.png)
+
+## 05 - BookTime ⌚
+
+El proyecto 05 es "BookTime", donde puedes calcular el tiempo que estarás leyendo un libro que te guste
+
+👉 Enlace: https://thebooktime.netlify.app/ <br /> 🧑‍💻 Código: [/05-booktime](https://github.com/jevmydev/reto-100-dias/tree/main/05-booktime)
+
+![Logo de BookTime](./images/booktime/logo.webp) ![Hero de BookTime](./images/BookTime/hero.png)
 
 ### Rework ⭐
 

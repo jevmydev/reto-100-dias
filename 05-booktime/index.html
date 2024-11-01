@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BookTime</title>
+        <link rel="icon" href="/favicon.webp" type="image/webp" />
+        <meta name="description" content="BookTime, calcula el tiempo que estarás leyendo ese libro que tanto te gusta" />
+        <link href="/style.css" rel="stylesheet" type="text/css" />
+        <script src="/js/fileDrop.js" type="module" defer></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__center center">
+                <nav class="header__nav">
+                    <a class="header__anchor anchor" href="/">
+                        <h1 class="header__title title">BookTime</h1>
+                    </a>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <section class="main__hero hero">
+                <div class="hero__center center">
+                    <div>
+                        <h2 class="hero__title title">Calcula el tiempo que estarás leyendo un libro</h2>
+                    </div>
+                    <div>
+                        <form class="hero__form form" action="GET">
+                            <div class="form__file file">
+                                <div class="file__drop">
+                                    <svg height="100" viewBox="0 0 24 24" fill="none">
+                                        <g stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <path
+                                                d="M7 10V9C7 6.23858 9.23858 4 12 4C14.7614 4 17 6.23858 17 9V10C19.2091 10 21 11.7909 21 14C21 15.4806 20.1956 16.8084 19 17.5M7 10C4.79086 10 3 11.7909 3 14C3 15.4806 3.8044 16.8084 5 17.5M7 10C7.43285 10 7.84965 10.0688 8.24006 10.1959M12 12V21M12 12L15 15M12 12L9 15"
+                                                stroke="currentColor"
+                                                stroke-width="1.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            ></path>
+                                        </g>
+                                    </svg>
+                                    <p>Sube el PDF del libro</p>
+                                </div>
+                                <label class="file__label">
+                                    <span class="file__status">No se ha seleccionado ningún archivo</span>
+                                    <input class="file__input" type="file" />
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="main__results results disabled">
+                <div class="results__center center">
+                    <div>
+                        <h2 class="results__title title">Resultados de Lectura</h2>
+                    </div>
+                    <div class="results__container"></div>
+                </div>
+            </section>
+        </main>
+        <div class="blur"></div>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("../fonts/jetbrains.ttf") format('truetype');
+}
+
+@layer components {
+    .word-spacing {
+        word-spacing: 1ch;
+    }
+}

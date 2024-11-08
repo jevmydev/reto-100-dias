@@ -12,6 +12,7 @@ tecnologías.
 | 03  | **Mathpaint**       | Dibuja en toda la web tus cálculos matemáticos | [/03-mathpaint](https://github.com/jevmydev/reto-100-dias/tree/main/03-mathpaint)             | https://mathpaint.netlify.app/       |
 | 04  | **TimeToEvent**     | Contador regresivo hasta tu fecha de tu evento | [/04-timetoevent](https://github.com/jevmydev/reto-100-dias/tree/main/04-timetoevent)         | https://timetoevent.netlify.app/     |
 | 05  | **BookTime**        | Calcula el tiempo que estarás leyendo un libro | [/05-booktime](https://github.com/jevmydev/reto-100-dias/tree/main/05-booktime)               | https://thebooktime.netlify.app/     |
+| 05  | **MonkeyType**      | pones a prueba tu mecanografía en este juego   | [/06-monkeytype](https://github.com/jevmydev/reto-100-dias/tree/main/06-monkeytype)           | https://monkeytype.netlify.app/      |
 
 ## 01 - AppNotes 📓
 
@@ -52,6 +53,14 @@ El proyecto 05 es "BookTime", donde puedes calcular el tiempo que estarás leyen
 👉 Enlace: https://thebooktime.netlify.app/ <br /> 🧑‍💻 Código: [/05-booktime](https://github.com/jevmydev/reto-100-dias/tree/main/05-booktime)
 
 ![Logo de BookTime](./images/booktime/logo.webp) ![Hero de BookTime](./images/booktime/hero.png)
+
+## 05 - MonkeyType ⌨️ (en desarrollo)
+
+El proyecto 06 es "MonkeyType", un juego web donde pones a prueba tu mecanografía mientras mejoras tu velocidad y precisión de tipeo
+
+👉 Enlace: https://monkeytype.netlify.app/ <br /> 🧑‍💻 Código: [/06-monkeytype](https://github.com/jevmydev/reto-100-dias/tree/main/06-monkeytype)
+
+![Logo de MonkeyType](./images/monkeytype/logo.webp) ![Hero de MonkeyType](./images/monkeytype/hero.png)
 
 ### Rework ⭐
 

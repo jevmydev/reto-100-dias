@@ -1,4 +1,6 @@
 export function formatWordsTyping(text) {
+    if (!text) return;
+
     const wordsSplit = text.split(" ");
     const words = [];
 

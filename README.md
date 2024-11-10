@@ -54,7 +54,7 @@ El proyecto 05 es "BookTime", donde puedes calcular el tiempo que estarás leyen
 
 ![Logo de BookTime](./images/booktime/logo.webp) ![Hero de BookTime](./images/booktime/hero.png)
 
-## 06 - MonkeyType ⌨️ (en desarrollo)
+## 06 - MonkeyType ⌨️
 
 El proyecto 06 es "MonkeyType", un juego web donde pones a prueba tu mecanografía mientras mejoras tu velocidad y precisión de tipeo
 

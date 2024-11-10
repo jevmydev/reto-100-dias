@@ -15,6 +15,12 @@ export default {
                 light: "rgba(169, 168, 235, 255)",
                 dark: "rgba(63, 62, 120, 255)",
                 failure: "rgba(222, 109, 109, 255)"
+            },
+            borderColor: {
+                dark: "rgba(63, 62, 120, 255)"
+            },
+            animation: {
+                pulse: "pulse 1.2s cubic-bezier(0.4, 0, 0.6, 1) infinite"
             }
         }
     },

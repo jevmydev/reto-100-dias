@@ -17,6 +17,7 @@ export default {
                 failure: "rgba(222, 109, 109, 255)"
             },
             borderColor: {
+                light: "rgba(169, 168, 235, 255)",
                 dark: "rgba(63, 62, 120, 255)"
             },
             animation: {

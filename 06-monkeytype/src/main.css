@@ -6,9 +6,3 @@
     font-family: "JetBrains Mono";
     src: url("../fonts/jetbrains.ttf") format('truetype');
 }
-
-@layer components {
-    .word-spacing {
-        word-spacing: 1ch;
-    }
-}

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 
-import { isValidKey } from "../utils/validate";
+import { isValidKey } from "../utils/validates";
 import { DEFAULT_IS_KEY_UP, DEFAULT_KEY_DOWN, DEFAULT_TYPING_POSITIONS } from "../utils/constants";
 
 export const useTyping = (words) => {

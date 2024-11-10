@@ -1,12 +1,13 @@
 import { useState, useEffect, useCallback } from "react";
 
 import { isValidKey } from "../utils/validates";
-import { DEFAULT_IS_KEY_UP, DEFAULT_KEY_DOWN, DEFAULT_TYPING_POSITIONS } from "../utils/constants";
+import { DEFAULT_GAME_OVER, DEFAULT_IS_KEY_UP, DEFAULT_KEY_DOWN, DEFAULT_TYPING_POSITIONS } from "../utils/constants";
 
 export const useTyping = (words) => {
     const [typing, setTyping] = useState(DEFAULT_TYPING_POSITIONS);
     const [keyDown, setKeyDown] = useState(DEFAULT_KEY_DOWN);
     const [isKeyUp, setIsKeyUp] = useState(DEFAULT_IS_KEY_UP);
+    const [gameOver, setGameOver] = useState(DEFAULT_GAME_OVER);
 
     const updateKeyDown = useCallback((newKeyDown) => setKeyDown(newKeyDown), []);
 
@@ -54,6 +55,8 @@ export const useTyping = (words) => {
     };
 
     const moveToNextWord = (errors) => {
+        if (typing.positionWord + 1 === words.length) setGameOver(true);
+
         setTyping((prevTyping) => ({
             positionLetter: 0,
             positionWord: prevTyping.positionWord + 1,
@@ -62,6 +65,8 @@ export const useTyping = (words) => {
     };
 
     const handleTyping = (key) => {
+        if (gameOver) return;
+
         const { positionLetter, positionWord, errors } = typing;
 
         const currentWord = words[positionWord];
@@ -76,7 +81,7 @@ export const useTyping = (words) => {
                 if (!isValidKey(key)) return;
 
                 if (key === currentLetter) handleCorrectKey({ currentWord, positionLetter, positionWord, errors });
-                else handleIncorrectKey({ currentWord, positionLetter, positionWord, errors, key });
+                else handleIncorrectKey({ currentWord, positionWord, positionLetter, errors, key });
                 break;
         }
     };
@@ -101,5 +106,5 @@ export const useTyping = (words) => {
         };
     }, [updateKeyDown, handleTyping]);
 
-    return { typing, keyDown, isKeyUp, updateKeyDown };
+    return { typing, keyDown, isKeyUp, gameOver };
 };

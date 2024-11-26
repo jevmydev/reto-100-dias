@@ -9,7 +9,7 @@ export function HomeTeslaJoinUs() {
                 </div>
                 <div className="w-full h-full mx-auto p-10 pt-20 flex flex-col items-start justify-center">
                     <div className="w-full flex flex-col gap-6">
-                        <h2 className="text-4xl font-semibold">Somos Tesla</h2>
+                        <h2 className="text-4xl">Somos Tesla</h2>
                         <Anchor title="Únetenos" href="https://www.tesla.com/es_cl/careers/search/" isActiveSecondary>
                             Únetenos
                         </Anchor>

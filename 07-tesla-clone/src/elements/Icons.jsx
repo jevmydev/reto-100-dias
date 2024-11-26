@@ -9,7 +9,7 @@ export function TeslaIcon({ w = "w-32", h = "h-6" }) {
     );
 }
 
-export function HelpIcon({ w = "w-7", h = "h-7" }) {
+export function HelpIcon({ w = "w-6", h = "h-6" }) {
     return (
         <svg className={`${w} ${h}`} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -20,7 +20,7 @@ export function HelpIcon({ w = "w-7", h = "h-7" }) {
     );
 }
 
-export function LanguageIcon({ w = "w-7", h = "h-7" }) {
+export function LanguageIcon({ w = "w-6", h = "h-6" }) {
     return (
         <svg className={`${w} ${h}`} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -31,7 +31,7 @@ export function LanguageIcon({ w = "w-7", h = "h-7" }) {
     );
 }
 
-export function AccountIcon({ w = "w-7", h = "h-7" }) {
+export function AccountIcon({ w = "w-6", h = "h-6" }) {
     return (
         <svg className={`${w} ${h}`} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path

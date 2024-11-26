@@ -12,7 +12,7 @@ export function NavItems() {
                     if (element === "button") {
                         return (
                             <li key={id}>
-                                <NavButton title={title}>{title}</NavButton>
+                                <Button title={title}>{title}</Button>
                             </li>
                         );
                     } else if (element === "anchor") {
@@ -20,27 +20,15 @@ export function NavItems() {
 
                         return (
                             <li key={id}>
-                                <NavAnchor title={title} href={href}>
+                                <Anchor title={title} href={href}>
                                     {title}
-                                </NavAnchor>
+                                </Anchor>
                             </li>
                         );
                     }
                 })}
             </ul>
         </div>
-    );
-}
-
-function NavButton({ title, children }) {
-    return <Button title={title}>{children}</Button>;
-}
-
-function NavAnchor({ title, href, children }) {
-    return (
-        <Anchor title={title} href={href}>
-            {children}
-        </Anchor>
     );
 }
 

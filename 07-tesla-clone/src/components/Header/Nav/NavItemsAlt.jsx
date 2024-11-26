@@ -5,16 +5,16 @@ import { navItemsAlt } from "../../../mocks/navItemsAlt";
 export function NavItemsAlt() {
     return (
         <div>
-            <ul className="flex">
+            <ul className="flex gap-1">
                 {navItemsAlt.map((item) => {
                     const { id, title, element, Icon } = item;
 
                     if (element === "button") {
                         return (
                             <li key={id}>
-                                <NavButton title={title}>
+                                <Button title={title} isIcon>
                                     <Icon />
-                                </NavButton>
+                                </Button>
                             </li>
                         );
                     } else if (element === "anchor") {
@@ -22,27 +22,15 @@ export function NavItemsAlt() {
 
                         return (
                             <li key={id}>
-                                <NavAnchor title={title} href={href}>
+                                <Anchor title={title} href={href} isIcon>
                                     <Icon />
-                                </NavAnchor>
+                                </Anchor>
                             </li>
                         );
                     }
                 })}
             </ul>
         </div>
-    );
-}
-
-function NavButton({ title, children }) {
-    return <Button title={title}>{children}</Button>;
-}
-
-function NavAnchor({ title, href, children }) {
-    return (
-        <Anchor title={title} href={href}>
-            {children}
-        </Anchor>
     );
 }
 

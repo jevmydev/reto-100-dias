@@ -4,7 +4,7 @@ import { TeslaIcon } from "../../../elements/Icons";
 export function NavIcon() {
     return (
         <div>
-            <Anchor href="/" title="Icono de Tesla">
+            <Anchor href="/" title="Icono de Tesla" isRemovePad isRemoveHover>
                 <h1 aria-label="Icono de Tesla">
                     <TeslaIcon />
                 </h1>

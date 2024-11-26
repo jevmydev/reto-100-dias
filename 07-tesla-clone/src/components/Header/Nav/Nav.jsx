@@ -4,7 +4,7 @@ import NavItemsAlt from "./NavItemsAlt";
 
 export function Nav() {
     return (
-        <nav className="flex items-center justify-between w-full px-10 py-4">
+        <nav className="flex items-center justify-between w-full px-10 py-3">
             <NavIcon />
             <NavItems />
             <NavItemsAlt />

@@ -3,7 +3,7 @@ import { footerItems } from "../../mocks/footerItems";
 
 export function FooterItems() {
     return (
-        <ul className="flex justify-center items-center gap-4">
+        <ul className="flex flex-wrap justify-center items-center gap-4 text-center">
             {footerItems.map((item) => {
                 const { id, title, href } = item;
                 return (

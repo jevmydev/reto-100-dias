@@ -1,5 +1,5 @@
 export function Anchor({ href, title, target, isActivePrimary = false, isActiveSecondary = false, isRemovePad = false, isRemoveHover = false, isIcon = false, ...props }) {
-    let anchorClass = "max-w-64	w-full flex items-center justify-center rounded transition-all ease-in-out duration-200";
+    let anchorClass = "max-w-64 max-h-10 h-full w-full flex items-center justify-center rounded transition-all ease-in-out duration-300";
     anchorClass += !isRemovePad && !isIcon ? " px-4 py-2" : "";
     anchorClass += isIcon ? " px-1 py-1" : "";
     anchorClass += !isRemoveHover ? " hover:backdrop-blur-lg hover:bg-hover" : "";

@@ -2,7 +2,7 @@ import { Anchor } from "../../../elements/Anchor";
 import { Button } from "../../../elements/Button";
 import { navItems } from "../../../mocks/navItems";
 
-export function NavItems() {
+export function NavItems({ handleMouseEnter, handleMouseLeave }) {
     return (
         <div>
             <ul className="flex">
@@ -12,7 +12,9 @@ export function NavItems() {
                     if (element === "button") {
                         return (
                             <li key={id}>
-                                <Button title={title}>{title}</Button>
+                                <Button title={title} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} isRemoveHover>
+                                    {title}
+                                </Button>
                             </li>
                         );
                     } else if (element === "anchor") {
@@ -20,7 +22,7 @@ export function NavItems() {
 
                         return (
                             <li key={id}>
-                                <Anchor title={title} href={href}>
+                                <Anchor title={title} href={href} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} isRemoveHover>
                                     {title}
                                 </Anchor>
                             </li>

@@ -2,7 +2,7 @@ import { Anchor } from "../../../elements/Anchor";
 import { Button } from "../../../elements/Button";
 import { navItemsAlt } from "../../../mocks/navItemsAlt";
 
-export function NavItemsAlt() {
+export function NavItemsAlt({ handleMouseEnter, handleMouseLeave }) {
     return (
         <div>
             <ul className="flex gap-1">
@@ -12,7 +12,7 @@ export function NavItemsAlt() {
                     if (element === "button") {
                         return (
                             <li key={id}>
-                                <Button title={title} isIcon>
+                                <Button title={title} isIcon onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} isRemoveHover>
                                     <Icon />
                                 </Button>
                             </li>
@@ -22,7 +22,7 @@ export function NavItemsAlt() {
 
                         return (
                             <li key={id}>
-                                <Anchor title={title} href={href} isIcon>
+                                <Anchor title={title} href={href} isIcon onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} isRemoveHover>
                                     <Icon />
                                 </Anchor>
                             </li>

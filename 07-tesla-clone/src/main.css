@@ -6,3 +6,13 @@
     font-family: "Universal Sans";
     src: url("/fonts/universal-sans.woff2") format("woff2")
 }
+
+@layer components {
+    .transition-header {
+        transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    }
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}

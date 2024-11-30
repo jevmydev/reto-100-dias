@@ -4,17 +4,17 @@ export function HomeModels({ title, imageSrc, isDisabledOrder }) {
     const titleFormat = title.split(" ").join("").toLowerCase();
 
     return (
-        <section>
+        <section className="snap-center">
             <div className="h-screen relative top-0 overflow-hidden">
                 <picture className="w-full h-full absolute -z-10">
                     <img className="w-full h-full object-cover" src={imageSrc} alt={title} />
                 </picture>
-                <div className="w-full h-full mx-auto p-10 pt-20 flex flex-col justify-between items-center">
+                <div className="w-full h-full mx-auto p-4 sm:px-10 pt-20 flex flex-col justify-between items-center text-center">
                     <div className="flex flex-col items-center gap-2">
-                        <h2 className="text-6xl tracking-tighter">{title}</h2>
+                        <h2 className="text-5xl sm:text-6xl tracking-tighter whitespace-nowrap">{title}</h2>
                         {!isDisabledOrder ? (
                             <Anchor
-                                className="shadow-normal transition-shadow ease-in-out duration-200 hover:shadow-hover"
+                                className="shadow-normal transition-shadow ease-in-out duration-200 whitespace-nowrap hover:shadow-hover"
                                 title="Agenda una prueba de manejo"
                                 href={`https://www.tesla.com/es_cl/drive?selectedModel=${titleFormat}`}
                             >

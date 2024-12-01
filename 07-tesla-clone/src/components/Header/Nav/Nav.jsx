@@ -19,7 +19,7 @@ export function Nav() {
     return (
         <nav className="relative flex items-center justify-between w-full px-10 py-3">
             <div
-                className={`${isMenuOpenClass} p-4 pt-20 flex gap-12 flex-col justify-center fixed top-0 left-0 z-10 w-screen h-screen bg-white text-main-dark md:flex-row md:justify-between md:static md:w-full md:h-full md:items-center md:bg-transparent md:text-white md:p-0 md:gap-0`}
+                className={`${isMenuOpenClass} text-main-dark p-4 pt-20 flex gap-12 flex-col justify-center fixed left-0 z-10 w-screen h-screen bg-white md:text-inherit md:flex-row md:justify-between md:static md:w-full md:h-full md:items-center md:bg-transparent md:p-0 md:gap-0`}
             >
                 <div className="hidden md:block">
                     <NavIcon />

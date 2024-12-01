@@ -13,6 +13,7 @@ tecnologías.
 | 04  | **TimeToEvent**     | Contador regresivo hasta tu fecha de tu evento | [/04-timetoevent](https://github.com/jevmydev/reto-100-dias/tree/main/04-timetoevent)         | https://timetoevent.netlify.app/     |
 | 05  | **BookTime**        | Calcula el tiempo que estarás leyendo un libro | [/05-booktime](https://github.com/jevmydev/reto-100-dias/tree/main/05-booktime)               | https://thebooktime.netlify.app/     |
 | 06  | **MonkeyType**      | Pon a prueba tu mecanografía en este juego     | [/06-monkeytype](https://github.com/jevmydev/reto-100-dias/tree/main/06-monkeytype)           | https://themonkeytype.netlify.app/   |
+| 07  | **Tesla Clon**      | Página clon de Tesla con todos sus efectos     | [/07-tesla-clone](https://github.com/jevmydev/reto-100-dias/tree/main/07-tesla-clone)         | https://the-tesla-clon.netlify.app/  |
 
 ## 01 - AppNotes 📓
 
@@ -61,6 +62,14 @@ El proyecto 06 es "MonkeyType", un juego web donde pones a prueba tu mecanograf�
 👉 Enlace: https://themonkeytype.netlify.app/ <br /> 🧑‍💻 Código: [/06-monkeytype](https://github.com/jevmydev/reto-100-dias/tree/main/06-monkeytype)
 
 ![Logo de MonkeyType](./images/monkeytype/logo.webp) ![Hero de MonkeyType](./images/monkeytype/hero.png)
+
+## 07 - Tesla Clon ⚡🚗
+
+El proyecto 07 es "Tesla Clon", una clon de la página de Tesla para fines educativos. Realice los efectos, el responsive, hovers y la landing principal de la web.
+
+👉 Enlace: https://the-tesla-clon.netlify.app/ <br /> 🧑‍💻 Código: [/07-tesla-clone](https://github.com/jevmydev/reto-100-dias/tree/main/07-tesla-clone)
+
+![Logo de Tesla](./images/tesla/logo.webp) ![Hero de Tesla](./images/tesla/hero.png)
 
 ### Rework ⭐
 

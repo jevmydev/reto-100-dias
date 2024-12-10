@@ -14,7 +14,7 @@ tecnologías.
 | 05  | **BookTime**        | Calcula el tiempo que estarás leyendo un libro | [/05-booktime](https://github.com/jevmydev/reto-100-dias/tree/main/05-booktime)               | https://thebooktime.netlify.app/     |
 | 06  | **MonkeyType**      | Pon a prueba tu mecanografía en este juego     | [/06-monkeytype](https://github.com/jevmydev/reto-100-dias/tree/main/06-monkeytype)           | https://themonkeytype.netlify.app/   |
 | 07  | **Tesla Clon**      | Página clon de Tesla con todos sus efectos     | [/07-tesla-clone](https://github.com/jevmydev/reto-100-dias/tree/main/07-tesla-clone)         | https://the-tesla-clon.netlify.app/  |
-| 07  | **Units**           | Convierte unidades entre diversas medidas      | [/08-units](https://github.com/jevmydev/reto-100-dias/tree/main/08-units)                     | https://the-units.netlify.app/       |
+| 08  | **Units**           | Convierte unidades entre diversas medidas      | [/08-units](https://github.com/jevmydev/reto-100-dias/tree/main/08-units)                     | https://the-units.netlify.app/       |
 
 ## 01 - AppNotes 📓
 

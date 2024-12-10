@@ -1,0 +1,63 @@
+@use "./var";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var.$bg-principal;
+    color: var.$color-principal;
+    font-family: var.$font-principal;
+    font-size: var.$size-principal;
+    min-height: 100vh;
+    text-rendering: optimizeLegibility;
+}
+
+.center {
+    max-width: var.$mw-document;
+    margin: 0 auto;
+    padding: 1rem;
+    padding-top: 1.5rem;
+}
+
+.title {
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var.$color-secondary;
+}
+
+.icon {
+    min-width: 25px;
+    min-height: 25px;
+    fill: currentColor;
+}
+
+.blur {
+    background: linear-gradient(90deg, #4169e1 35%, #8de4fa 100%);
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    filter: blur(10rem);
+    animation: blur-animate 1s infinite alternate-reverse ease;
+}
+
+@keyframes blur-animate {
+    from {
+        filter: blur(9.5rem);
+    }
+    to {
+        filter: blur(10rem);
+    }
+}

@@ -1,5 +1,5 @@
 import { useUnits } from "../../hooks/useUnits";
-import { EqualIcon } from "../../elements/icons";
+import { EqualIcon } from "../../elements/Icons";
 import { measurements } from "../../mocks/measurements";
 
 function Units() {

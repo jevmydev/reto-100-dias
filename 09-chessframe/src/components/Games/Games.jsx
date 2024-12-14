@@ -24,10 +24,10 @@ export function Games() {
                         return (
                             <Anchor key={title} href={formatHref} title={title} isBoard>
                                 <article className="flex flex-col gap-4">
-                                    <header>
+                                    <header className="overflow-hidden whitespace-nowrap text-ellipsis max-w-72">
                                         <h3 className="text-xl font-bold">{title}</h3>
                                     </header>
-                                    <section className="w-full min-w-64">
+                                    <section className="w-72">
                                         <ChessBoard pgn={formatPGN} />
                                     </section>
                                     <footer className="flex justify-end gap-4">

@@ -16,7 +16,7 @@ tecnologías.
 | 07  | **Tesla Clon**      | Página clon de Tesla con todos sus efectos     | [/07-tesla-clone](https://github.com/jevmydev/reto-100-dias/tree/main/07-tesla-clone)         | https://the-tesla-clon.netlify.app/  |
 | 08  | **Units**           | Convierte unidades entre diversas medidas      | [/08-units](https://github.com/jevmydev/reto-100-dias/tree/main/08-units)                     | https://the-units.netlify.app/       |
 | 09  | **Chessframe**      | Destaca tus mejores partidas de ajedrez        | [/09-chessframe](https://github.com/jevmydev/reto-100-dias/tree/main/09-chessframe)           | https://chessframe.netlify.app/      |
-| 09  | **Santa Tracker**   | Recorre el viaje de Santa en navidad           | [/10-santatracker](https://github.com/jevmydev/reto-100-dias/tree/main/10-santatracker)       | https://the-santa-tracker.netlify.app/    |
+| 10  | **Santa Tracker**   | Recorre el viaje de Santa en navidad           | [/10-santatracker](https://github.com/jevmydev/reto-100-dias/tree/main/10-santatracker)       | https://the-santa-tracker.netlify.app/    |
 
 ## 01 - AppNotes 📓
 

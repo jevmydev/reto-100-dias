@@ -1,5 +1,5 @@
 export const formatPGNForDisplay = (pgn) => {
-    const format = pgn?.replace(/\\"/g, '"').replace(/\\n/g, "\n");
+    const format = pgn?.replace(/\\"/g, "\"").replace(/\\n/g, "\n");
     return format?.substring(1, format.length - 1);
 };
 

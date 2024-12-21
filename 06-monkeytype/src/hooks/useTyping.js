@@ -73,16 +73,16 @@ export const useTyping = (words) => {
         const currentLetter = currentWord[positionLetter];
 
         switch (key) {
-            case "Backspace":
-                handleBackspace({ positionLetter, positionWord, errors });
-                return;
+        case "Backspace":
+            handleBackspace({ positionLetter, positionWord, errors });
+            return;
 
-            default:
-                if (!isValidKey(key)) return;
+        default:
+            if (!isValidKey(key)) return;
 
-                if (key === currentLetter) handleCorrectKey({ currentWord, positionLetter, positionWord, errors });
-                else handleIncorrectKey({ currentWord, positionWord, positionLetter, errors, key });
-                break;
+            if (key === currentLetter) handleCorrectKey({ currentWord, positionLetter, positionWord, errors });
+            else handleIncorrectKey({ currentWord, positionWord, positionLetter, errors, key });
+            break;
         }
     };
 

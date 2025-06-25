@@ -11,7 +11,7 @@ const canvasState = {
     dragStartY: 0,
     offsetX: 0,
     offsetY: 0,
-    zoom: 1
+    zoom: 1.3
 };
 
 const strokes = [];
